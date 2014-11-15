@@ -41,13 +41,13 @@ h2 {
 	height: 100%;
 	background-repeat: no-repeat;
 	background-size: cover;
-	background-image: url('images/photos/photo 2.jpg');
+	background-image: url('images/photos/photo-2.jpg');
 
 	transition: opacity 1s ease-in-out;
 }
 
 .background-image.two {
-	background-image: url('images/photos/photo 3.jpg');
+	background-image: url('images/photos/photo-3.jpg');
 
 }
 
