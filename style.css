@@ -169,6 +169,9 @@ nav#header-menu a:hover {
 	padding: 0.5em 1em;
 }
 
+.opening_times_table tr td:last-of-type {
+	white-space: nowrap;
+}
 
 .prices__table {
 	width: 100%;
