@@ -171,11 +171,10 @@ nav#header-menu a:hover {
 
 
 .prices__table {
- 
+	width: 100%;
 }
-.prices__table tr td:first-of-type{
-font-size: 1em;
-
+.prices__table tr td:last-of-type{
+	text-align:right;
 }
 
 .prices__table tr {
