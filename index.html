@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Mister JT Barbers</title>
+
+	<link rel="stylesheet" type="text/css" href="csswizardry-grids.css">
+	<link rel="stylesheet" type="text/css" href="style.css">
+	<link href='http://fonts.googleapis.com/css?family=Open+Sans:400,700' rel='stylesheet' type='text/css'>
+</head>
+<body>
+
+	<div id="background" class="background-image"></div>
+	
+	<header>
+		<div class="logo-container">
+			<img class="logo-image" src="images/misterjt-logo-filled.png"  />
+		</div>
+
+		<nav id="header-menu">
+			<ul>
+				<li class="left">
+					<a data-scroll href="#contact">Contact</a>
+				</li>
+				<li class="right">
+					<a data-scroll href="#prices">Prices</a>
+				</li>
+				<li class="center">
+					<a data-scroll href="#queuecam">Queue Cam</a>
+				</li>
+			</ul>
+		</nav>
+	</header>
+
+	<div id="queuecam" class="content-block queuecam">
+		<h2 >Queue Cam</h2>
+		<div class="queuecam__container">
+			<div class="queuecam__wrapper">
+			    <div class="queuecam__inner">
+					<img src="http://fc8774.myfoscam.org:88/cgi-bin/CGIStream.cgi?cmd=GetMJStream&usr=thesite&pwd=sitepassword" id="queuecam__img"/>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<div id="prices" class="content-block grid">
+		<div class="grid__item one-whole">
+			<h2>Prices</h2>
+			<table cellpadding="0" cellspacing="0" class="prices__table">
+				<thead>
+					<tr>
+						<th colspan="2"></th>
+					</tr>
+				</thead>			
+				 <tbody>
+					<tr class="odd">
+						<td><strong>Cut</strong></td><td class="right">from £11.00</td>
+					</tr>
+					<tr>
+						<td><strong>Wash cut &amp; Finish</strong></td><td class="right">from £13.00</td>
+					</tr>
+					<tr class="odd">
+						<td><strong>Senior Citizens</strong></td><td class="right">from £8.50</td>
+					</tr>
+					<tr>
+						<td><strong>Boys under 15</strong></td><td class="right">from £9.50</td>
+					</tr>
+					<tr class="odd">
+						<td><strong>Boys under 5</strong></td><td class="right">from £7.50</td>
+					</tr>
+					<tr>
+						<td><strong>Flat Top</strong></td><td class="right">from £13.00</td>
+					</tr>
+					<tr class="odd">
+						<td><strong>Crew Cut</strong></td><td class="right">from £8.50</td>
+					</tr>
+					<tr>
+						<td><strong>Basic Shave</strong></td><td class="right">from £12.50</td>
+					</tr>
+					<tr class="odd">
+						<td><strong>'The Works' Shave</strong></td><td class="right">from £15.00</td>
+					</tr>
+				 </tbody>
+	        </table>
+	    </div><!--
+	    -->
+
+	</div>
+	
+	<div class="content-block grid">
+		<div class="grid__item one-third">
+			<h2 class=Myriad>Opening Times</h2>
+			<br />
+			<table cellpadding="0" cellspacing="5" class="opening_times_table">
+				<tbody>
+					<tr>
+						<td><strong>Monday</strong></td>
+						<td align=right>9:00am to 6:30pm</td>
+					</tr>
+					<tr>
+						<td><strong>Tuesday</strong></td>
+						<td align=right>9:00am to 6:30pm</td>
+					</tr>
+					<tr>
+						<td><strong>Wednesday</strong></td>
+						<td align=right>9:00am to 6:30pm</td>
+					</tr>
+					<tr>
+						<td><strong>Thursday</strong></td>
+						<td align=right>9:00am to 6:30pm</td>
+					</tr>
+					<tr>
+						<td><strong>Friday</strong></td>
+						<td align=right>9:00am to 7:00pm</td>
+					</tr>
+					<tr>
+						<td><strong>Saturday</strong></td>
+						<td align=right>8:00am to 6:00pm</td>
+					</tr>
+					<tr>
+						<td><strong>Sunday</strong></td>
+						<td align=right>Closed</td>
+					</tr>
+				</tbody>
+			</table>
+			<p class=hr></p>
+			<h2 class=Myriad>Get Directions</h2>
+			<br />
+			<p>
+			    <a href="http://g.co/maps/qx5r" target="_blank">Click Here for Google Maps</a>
+			</p>
+		</div><!--
+		--><div id="contact" class="grid__item two-thirds">
+	    	<h2>Contact</h2>
+
+	    	<p>
+	    	    To get in contact with Mister JT Barbers, fill in the form below or give us a call on 01273 911960.
+	    	</p>
+
+
+			<form action="contact.php" method="POST" enctype="multipart/form-data" id="contact_form" onsubmit="return checkform13548(this);">
+			    
+			    <label>
+			        <strong class="formlabel">Your Name</strong>
+				</label>
+			    
+			    <input name="name" type="text" placeholder="Your Name" required/>
+			    
+
+			    <br class="clearBoth" />
+
+			    <label for=email class="floatLeft marginLeft_50">
+			        <strong class="formlabel">Your Email</strong>
+			    </label>
+
+		        <input name="email" type="email" required placeholder="your@email.com" />
+
+				<br class="clearBoth" />
+
+			    <label for="message">
+			        <strong class="formlabel">Message</strong>
+			    </label>
+
+		        <textarea id="message" name="message" rows="8" cols="30" required placeholder="Your message"></textarea>
+
+				<button value="Send" type="submit">Send</button>
+
+			</form>
+		</div>
+	</div>
+	<script type="text/javascript" src="js/misterjtbarbers.js"></script>
+	<script src="js/bind-polyfill.min.js"></script>
+	<script src="js/smooth-scroll.min.js"></script>
+	<script>
+	    smoothScroll.init();
+	</script>
+</body>
+</html>
