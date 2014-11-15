@@ -130,7 +130,7 @@ nav#header-menu a:hover {
 .content-block {
 	position: relative;
 	background: #efefef;
-	background: rgba(255,255,255,0.8);
+	background: rgba(255,255,255,0.95);
 
 	padding: 1em;
 	margin-top: 5em;
