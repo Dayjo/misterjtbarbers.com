@@ -160,13 +160,30 @@ nav#header-menu a:hover {
 	height: 100%;
 }
 
-.opening_times_table, .prices__table {
+.opening_times_table {
 	margin: 0 auto;
 	text-align: left;
 }
 
 .opening_times_table td, .prices__table td{
 	padding: 0.5em 1em;
+}
+
+
+.prices__table {
+ 
+}
+.prices__table tr td:first-of-type{
+font-size: 1em;
+
+}
+
+.prices__table tr {
+    background: rgba(255,255,255,0.5);
+}
+
+.prices__table tr:nth-child(2n) {
+    background: rgba(50,0,0,0.05)
 }
 
 /* Contact Form */
