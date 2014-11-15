@@ -180,11 +180,11 @@ nav#header-menu a:hover {
 	text-align:right;
 }
 
-.prices__table tr {
+.prices__table tr, .opening_times_table tr {
     background: rgba(255,255,255,0.5);
 }
 
-.prices__table tr:nth-child(2n) {
+.prices__table tr:nth-child(2n), .opening_times_table tr:nth-child(2n) {
     background: rgba(50,0,0,0.05)
 }
 
