@@ -160,9 +160,10 @@ nav#header-menu a:hover {
 	height: 100%;
 }
 
-.opening_times_table {
-	margin: 0 auto;
-	text-align: left;
+
+.prices__table, .opening_times_table {
+	text-align: left; 
+	width: 100%;
 }
 
 .opening_times_table td, .prices__table td{
@@ -173,9 +174,7 @@ nav#header-menu a:hover {
 	white-space: nowrap;
 }
 
-.prices__table {
-	width: 100%;
-}
+
 .prices__table tr td:last-of-type{
 	text-align:right;
 }
