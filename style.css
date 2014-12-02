@@ -19,6 +19,10 @@ html,body {
 	font-size: 16px;
 }
 
+a { 
+	color:#4d90fe;
+}
+
 header {
 	height: 100%;
 }
@@ -41,13 +45,13 @@ h2 {
 	height: 100%;
 	background-repeat: no-repeat;
 	background-size: cover;
-	background-image: url('images/photos/photo-2.jpg');
+	background-image: url('images/photos/photo-2-large.jpg');
 
 	transition: opacity 1s ease-in-out;
 }
 
 .background-image.two {
-	background-image: url('images/photos/photo-3.jpg');
+	background-image: url('images/photos/photo-6-large.jpg');
 
 }
 
@@ -217,8 +221,23 @@ input, textarea, button {
 }
 
 button {
+	-webkit-box-shadow: none;
+	box-shadow: none;
+	background-color: #4d90fe;
+	background-image: -webkit-linear-gradient(top,#4d90fe,#4787ed);
+	background-image: linear-gradient(top,#4d90fe,#4787ed);
+	color: white;
+	border-bottom: 1px solid silver;
+	cursor: pointer;
+}
 
-}	
+button:hover {
+	-webkit-box-shadow: none;
+	box-shadow: none;
+	background-color: #4d90fe;
+	background-image: -webkit-linear-gradient(top,#4787ed,#4d90fe);
+	background-image: linear-gradient(top,#4787ed,#4d90fe);
+}
 
 /* -  - */
 
