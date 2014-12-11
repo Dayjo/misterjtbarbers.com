@@ -15,6 +15,27 @@ function update_background_image(){
 		backgroundImage.classList.remove('two');
 	}
 }
+
+var d=new Date();
+var today = d.getDay();
+var tdate = d.getDate();
+var month = 1 + d.getMonth();
+var year = d.getFullYear();
+var hour  = d.getHours();
+var weareopen = false;
+var openingHours = {1:{"open":9,"close":18},2:{"open":9,"close":18},3:{"open":9,"close":18},4:{"open":9,"close":18},5:{"open":9,"close":19},6:{"open":8,"close":16},0:{"open":0,"close":0}};
+var todaysdate = tdate + '-' + month + '-' + year;
+var holidays = {'11-1-2012': {}, '12-1-2012': {}, '13-1-2012': {}, '14-1-2012': {}, '15-1-2012': {}, '16-1-2012': {}, '17-1-2012': {}, '18-1-2012': {}, '19-1-2012': {}, '20-1-2012': {}, '21-1-2012': {}, '22-1-2012': {}, '23-1-2012': {}};
+
+if ( ( openingHours[today].open <= hour && openingHours[today].close > hour ) && ( !holidays[todaysdate] || (holidays[todaysdate].open <= hour && holidays[todaysdate].close > hour) )) {
+      weareopen = true;
+      document.getElementById('queuecam__img').src = 'http://fc8774.myfoscam.org:88/cgi-bin/CGIProxy.fcgi?cmd=snapPicture2&usr=thesite&pwd=sitepassword';
+      document.getElementById("queuecam").classList.remove("closed");
+} else {
+      weareopen = false;
+      document.getElementById("queuecam").classList.add("closed");
+}
+
 /*
 var low_res  = 'http://fc8774.myfoscam.org:88/cgi-bin/CGIProxy.fcgi?cmd=snapPicture2&usr=thesite&pwd=sitepassword';
 var high_res = 'http://fc8774.myfoscam.org:88/cgi-bin/CGIProxy.fcgi?cmd=snapPicture2&usr=thesite&pwd=sitepassword';

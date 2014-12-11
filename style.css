@@ -144,7 +144,7 @@ nav#header-menu a:hover {
 	margin: 0 auto;
 }
 
-.queuecam__wrapper{
+.queuecam__wrapper {
     padding-top:56.25%;
     height:0;
     position: relative;
@@ -159,11 +159,29 @@ nav#header-menu a:hover {
     bottom:0;
 }
 
+.queuecam__inner h2 {
+	display: none;
+	position: absolute;
+	z-index: 1;
+	top: 50%;
+	margin-top: -1em;
+	text-align: center;
+	width: 100%;
+	font-size: 3em;
+}
+
+#queuecam.closed .queuecam__inner h2 {
+	display: block;
+}
+
 #queuecam__img {
 	width: 100%;
 	height: 100%;
 }
 
+#queuecam.closed #queuecam__img {	
+	opacity: 0.3;
+} 
 
 .prices__table, .opening_times_table {
 	text-align: left; 
