@@ -5,8 +5,9 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<title>Mister JT Barbers</title>
 	<link rel="stylesheet" type="text/css" href="csswizardry-grids.min.css">
-	<link rel="stylesheet" type="text/css" href="style.min.css">
+	<link rel="stylesheet" type="text/css" href="style.css">
 	<link href='http://fonts.googleapis.com/css?family=Open+Sans:400,700' rel='stylesheet' type='text/css'>
+	<script type='text/javascript' src="//wurfl.io/wurfl.js"></script>
 </head>
 <body>
 
@@ -33,144 +34,16 @@
 	</header>
 
 	<div id="queuecam" class="content-block queuecam">
-		<h2 >Queue Cam</h2>
-		<div class="queuecam__container">
-			<div class="queuecam__wrapper">
-			    <div class="queuecam__inner">
-					<img src="images/photos/shop-large.jpg" id="queuecam__img"/>
-					<h2>Sorry, We are currently closed!</h2>
+		<div class="content__constraint">
+			<h2 >Queue Cam</h2>
+			<div class="queuecam__container">
+				<div class="queuecam__wrapper">
+				    <div class="queuecam__inner">
+						<img src="images/photos/shop-large.jpg" id="queuecam__img"/>
+						<h2>Sorry, We are currently closed!</h2>
+					</div>
 				</div>
 			</div>
-		</div>
-	</div>
-
-	<div id="prices" class="content-block grid">
-		<div class="grid__item desk--one-half lap--one-one palm--one-whole">
-			<h2>Prices</h2>
-			<table cellpadding="0" cellspacing="0" class="prices__table">
-				<thead>
-					<tr>
-						<th colspan="2"></th>
-					</tr>
-				</thead>			
-				 <tbody>
-					<tr class="odd">
-						<td><strong>Cut</strong></td><td class="right">from £11.00</td>
-					</tr>
-					<tr>
-						<td><strong>Wash cut &amp; Finish</strong></td><td class="right">from £13.00</td>
-					</tr>
-					<tr class="odd">
-						<td><strong>Senior Citizens</strong></td><td class="right">from £8.50</td>
-					</tr>
-					<tr>
-						<td><strong>Boys under 15</strong></td><td class="right">from £9.50</td>
-					</tr>
-					<tr class="odd">
-						<td><strong>Boys under 5</strong></td><td class="right">from £7.50</td>
-					</tr>
-					<tr>
-						<td><strong>Flat Top</strong></td><td class="right">from £13.00</td>
-					</tr>
-					<tr class="odd">
-						<td><strong>Crew Cut</strong></td><td class="right">from £8.50</td>
-					</tr>
-					<tr>
-						<td><strong>Basic Shave</strong></td><td class="right">from £12.50</td>
-					</tr>
-					<tr class="odd">
-						<td><strong>'The Works' Shave</strong></td><td class="right">from £15.00</td>
-					</tr>
-				 </tbody>
-	        </table>
-	    </div><!--
-	    -->
-
-	</div>
-	
-	<div class="content-block grid">
-		<div class="grid__item one-third palm--one-whole lap--one-half">
-			<h2 class=Myriad>Opening Times</h2>
-			<br />
-			<table cellpadding="0" cellspacing="0" class="opening_times_table">
-				<tbody>
-					<tr>
-						<td><strong>Monday</strong></td>
-						<td align=right>9:00am to 6:30pm</td>
-					</tr>
-					<tr>
-						<td><strong>Tuesday</strong></td>
-						<td align=right>9:00am to 6:30pm</td>
-					</tr>
-					<tr>
-						<td><strong>Wednesday</strong></td>
-						<td align=right>9:00am to 6:30pm</td>
-					</tr>
-					<tr>
-						<td><strong>Thursday</strong></td>
-						<td align=right>9:00am to 6:30pm</td>
-					</tr>
-					<tr>
-						<td><strong>Friday</strong></td>
-						<td align=right>9:00am to 7:00pm</td>
-					</tr>
-					<tr>
-						<td><strong>Saturday</strong></td>
-						<td align=right>8:00am to 6:00pm</td>
-					</tr>
-					<tr>
-						<td><strong>Sunday</strong></td>
-						<td align=right>Closed</td>
-					</tr>
-				</tbody>
-			</table>
-			<p class=hr></p>
-			<h2 class=Myriad>Get Directions</h2>
-			<br />
-			<div class="google-maps">
-				<iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d2334.0944520171033!2d-0.24555490000000002!3d50.8417874!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x48759a769483005f%3A0xe59916c4a4edd0fb!2s28+Kingston+Broadway%2C+Shoreham-by-Sea%2C+West+Sussex+BN43+6TE!5e1!3m2!1sen!2suk!4v1416075604278" class="google_maps_iframe" frameborder="0" style="border:0"></iframe>
-			</div>
-			<p>
-			    <a href="http://g.co/maps/qx5r" target="_blank">Click Here for Google Maps</a>
-			</p>
-		</div><!--
-		--><div id="contact" class="grid__item two-thirds palm--one-whole lap--one-half">
-	    	<h2>Contact</h2>
-
-	    	<p>
-	    	    To get in contact with Mister JT Barbers, fill in the form below or give us a call on 01273 911960.
-	    	</p>
-
-
-			<form action="contact.php" method="POST" enctype="multipart/form-data" id="contact_form" onsubmit="return checkform13548(this);">
-			    
-			    <label>
-			        <strong class="formlabel">Your Name</strong>
-				</label>
-			    
-			    <input name="name" type="text" placeholder="Your Name" required/>
-			    
-
-			    <br class="clearBoth" />
-
-			    <label for=email class="floatLeft marginLeft_50">
-			        <strong class="formlabel">Your Email</strong>
-			    </label>
-
-		        <input name="email" type="email" required placeholder="your@email.com" />
-
-				<br class="clearBoth" />
-
-			    <label for="message">
-			        <strong class="formlabel">Message</strong>
-			    </label>
-
-		        <textarea id="message" name="message" rows="8" cols="30" required placeholder="Your message"></textarea>
-
-				<button value="Send" type="submit">Send</button>
-
-			</form>
-
 			<br />
 			<div style="width: 50px; float: left;">        
 		        <iframe scrolling="no" frameborder="0" allowtransparency="true" style="height: 60px; width: 450px;" src="http://www.facebook.com/plugins/like.php?href=http%3A%2F%2Fwww.misterjtbarbers.com%2Findex.html&amp;font=&amp;show_faces=0&amp;width=450&amp;height=60&amp;layout=box_count&amp;action=like"></iframe>
@@ -180,7 +53,153 @@
 			    <script src="https://apis.google.com/js/plusone.js" type="text/javascript"></script>
 			    <div id="___plusone_0" style="height: 60px; width: 50px; display: inline-block; text-indent: 0pt; margin: 0pt; padding: 0pt; background: none repeat scroll 0% 0% transparent; border-style: none; float: none;"><iframe width="100%" scrolling="no" frameborder="0" vspace="0" tabindex="-1" style="position: static; left: 0pt; top: 0pt; width: 50px; height: 60px; visibility: visible;" src="https://plusone.google.com/u/0/_/+1/fastbutton?url=http%3A%2F%2Fwww.misterjtbarbers.com%2F&amp;size=tall&amp;count=true&amp;annotation=&amp;hl=en-US&amp;jsh=r%3Bgc%2F23217085-590ae8cc#id=I1_1314266102953&amp;parent=http%3A%2F%2Fwww.misterjtbarbers.com&amp;rpctoken=428622240&amp;_methods=onPlusOne%2C_ready%2C_close%2C_open%2C_resizeMe" name="I1_1314266102953" marginwidth="0" marginheight="0" id="I1_1314266102953" hspace="0" allowtransparency="true"></iframe></div>
 			</div>
+			<div class="cf"></div>
 
+		</div>	
+	</div>
+
+	<div id="prices" class="content-block grid">
+		<div class="content__constraint">
+			<div class="grid__item desk--two-thirds lap--two-thirds palm--one-whole">
+				<h2>Prices</h2>
+				<table cellpadding="0" cellspacing="0" class="prices__table">
+					<thead>
+						<tr>
+							<th colspan="2"></th>
+						</tr>
+					</thead>			
+					 <tbody>
+						<tr class="odd">
+							<td><strong>Cut</strong></td><td class="right">from £11.00</td>
+						</tr>
+						<tr>
+							<td><strong>Wash cut &amp; Finish</strong></td><td class="right">from £13.00</td>
+						</tr>
+						<tr class="odd">
+							<td><strong>Senior Citizens</strong></td><td class="right">from £8.50</td>
+						</tr>
+						<tr>
+							<td><strong>Boys under 15</strong></td><td class="right">from £9.50</td>
+						</tr>
+						<tr class="odd">
+							<td><strong>Boys under 5</strong></td><td class="right">from £7.50</td>
+						</tr>
+						<tr>
+							<td><strong>Flat Top</strong></td><td class="right">from £13.00</td>
+						</tr>
+						<tr class="odd">
+							<td><strong>Crew Cut</strong></td><td class="right">from £8.50</td>
+						</tr>
+						<tr>
+							<td><strong>Basic Shave</strong></td><td class="right">from £12.50</td>
+						</tr>
+						<tr class="odd">
+							<td><strong>'The Works' Shave</strong></td><td class="right">from £15.00</td>
+						</tr>
+					 </tbody>
+		        </table>
+		    </div><!--
+		    --><div class="grid__item desk--one-third lap--one-third palm--hidden">
+		    <h2>&nbsp;</h2>
+		    	<div id="gallery" class="responsive__gallery">
+		    		<img src="images/photos/staff-1-small.jpg" class="current"/><img src="images/photos/tao-small.jpg" /><!--
+		    		--><img src="images/photos/photo-3-small.jpg" /><!--
+		    		--><img src="images/photos/photo-5-small.jpg" /><!--
+		    --></div><div class="cf"></div>
+		    </div>
+		</div>
+	</div>
+	
+	<div class="content-block grid">
+		<div class="content__constraint">
+			<div class="grid__item one-half palm--one-whole lap--one-half">
+				<h2 class=Myriad>Opening Times</h2>
+				<br />
+				<table cellpadding="0" cellspacing="0" class="opening_times_table">
+					<tbody>
+						<tr>
+							<td><strong>Monday</strong></td>
+							<td align=right>9:00am to 6:30pm</td>
+						</tr>
+						<tr>
+							<td><strong>Tuesday</strong></td>
+							<td align=right>9:00am to 6:30pm</td>
+						</tr>
+						<tr>
+							<td><strong>Wednesday</strong></td>
+							<td align=right>9:00am to 6:30pm</td>
+						</tr>
+						<tr>
+							<td><strong>Thursday</strong></td>
+							<td align=right>9:00am to 6:30pm</td>
+						</tr>
+						<tr>
+							<td><strong>Friday</strong></td>
+							<td align=right>9:00am to 7:00pm</td>
+						</tr>
+						<tr>
+							<td><strong>Saturday</strong></td>
+							<td align=right>8:00am to 6:00pm</td>
+						</tr>
+						<tr>
+							<td><strong>Sunday</strong></td>
+							<td align=right>Closed</td>
+						</tr>
+					</tbody>
+				</table>
+			</div><!--
+			--><div class="grid__item one-half">
+				<h2 class=Myriad>Get Directions</h2>
+				<br />
+				<div class="google-maps">
+					<iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d2334.0944520171033!2d-0.24555490000000002!3d50.8417874!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x48759a769483005f%3A0xe59916c4a4edd0fb!2s28+Kingston+Broadway%2C+Shoreham-by-Sea%2C+West+Sussex+BN43+6TE!5e1!3m2!1sen!2suk!4v1416075604278" class="google_maps_iframe" frameborder="0" style="border:0"></iframe>
+				</div>
+				<p>
+				    <a href="http://g.co/maps/qx5r" target="_blank">Click Here for Google Maps</a>
+				</p>
+			</div>
+		</div>
+	</div>
+
+	<div class="content-block grid">
+		<div class="content__constraint">
+			<div id="contact" class="grid__item grid__center two-thirds palm--one-whole">
+		    	<h2>Contact</h2>
+
+		    	<p>
+		    	    To get in contact with Mister JT Barbers, fill in the form below or give us a call on 01273 911960.
+		    	</p>
+
+
+				<form action="contact.php" method="POST" enctype="multipart/form-data" id="contact_form" onsubmit="return checkform13548(this);">
+				    
+				    <label>
+				        <strong class="formlabel">Your Name</strong>
+					</label>
+				    
+				    <input name="name" type="text" placeholder="Your Name" required/>
+				    
+
+				    <br class="clearBoth" />
+
+				    <label for=email class="floatLeft marginLeft_50">
+				        <strong class="formlabel">Your Email</strong>
+				    </label>
+
+			        <input name="email" type="email" required placeholder="your@email.com" />
+
+					<br class="clearBoth" />
+
+				    <label for="message">
+				        <strong class="formlabel">Message</strong>
+				    </label>
+
+			        <textarea id="message" name="message" rows="8" cols="30" required placeholder="Your message"></textarea>
+
+					<button value="Send" type="submit">Send</button>
+
+				</form>
+			</div>
 		</div>
 	</div>
 	<script type="text/javascript" src="js/misterjtbarbers.js"></script>

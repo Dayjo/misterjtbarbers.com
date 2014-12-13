@@ -139,6 +139,11 @@ nav#header-menu a:hover {
 	margin-top: 5em;
 }
 
+.content__constraint {
+	max-width: 1000px;
+	margin: 0 auto;
+}
+
 .queuecam__container {
 	max-width: 1024px;
 	margin: 0 auto;
@@ -257,6 +262,42 @@ button:hover {
 	background-image: linear-gradient(top,#4787ed,#4d90fe);
 }
 
+
+.responsive__gallery {
+	max-width: 100%;
+	position: relative;
+
+}
+
+
+.responsive__gallery img {
+	position:absolute;
+	max-width: 100%;
+	opacity: 0;
+	-webkit-transition: opacity 3s; /* For Safari 3.1 to 6.0 */
+	transition: opacity 3s;
+	left: 0;
+}
+
+.responsive__gallery img.current {
+	position:relative;
+	height:auto;
+	opacity: 1;
+	-webkit-transition: opacity 3s; /* For Safari 3.1 to 6.0 */
+	transition: opacity 3s;
+}
+
+
+
+.cf {
+	clear: both;
+}
+
+.grid__center {
+	display: block;
+	margin: 0 auto;
+}
+
 /* -  - */
 
 @media screen and (max-width: 1023px) {
@@ -312,5 +353,7 @@ button:hover {
 }
 
 @media screen and (max-width: 480px) {
-	
+	.palm--hidden {
+		display: none;
+	}
 }

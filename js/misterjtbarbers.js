@@ -1,11 +1,31 @@
 var backgroundImage = document.getElementById('background');
 var queuecam = document.querySelector('.content-block.queuecam');
+var gallery = document.getElementById('gallery');
+var gallery_images = gallery.querySelector('img');
+
+var high_res = 'http://fc8774.myfoscam.org:88/cgi-bin/CGIProxy.fcgi?cmd=snapPicture2&usr=thesite&pwd=sitepassword';
+var stream 	= 'http://fc8774.myfoscam.org:88/cgi-bin/CGIStream.cgi?cmd=GetMJStream&usr=thesite&pwd=sitepassword';
 
 window.addEventListener('scroll', function(){
 	update_background_image();
 }, true);
 
 setInterval(update_background_image, 1000);
+setInterval(gallery_update, 5000);
+
+function gallery_update(){
+	var current = gallery.querySelector('img.current');
+	var next = current.nextElementSibling;
+	
+	// No last one, so get the first one
+	if ( next == null ) {
+		next = gallery.querySelector('img');
+	}
+
+	current.className = "";
+	next.className = "current";
+
+}
 
 function update_background_image(){
 	if ( window.scrollY >= queuecam.offsetTop  ) {
@@ -29,18 +49,30 @@ var holidays = {'11-1-2012': {}, '12-1-2012': {}, '13-1-2012': {}, '14-1-2012': 
 
 if ( ( openingHours[today].open <= hour && openingHours[today].close > hour ) && ( !holidays[todaysdate] || (holidays[todaysdate].open <= hour && holidays[todaysdate].close > hour) )) {
       weareopen = true;
-      document.getElementById('queuecam__img').src = 'http://fc8774.myfoscam.org:88/cgi-bin/CGIProxy.fcgi?cmd=snapPicture2&usr=thesite&pwd=sitepassword';
       document.getElementById("queuecam").classList.remove("closed");
+
+      stream_queuecam();
+
 } else {
       weareopen = false;
       document.getElementById("queuecam").classList.add("closed");
+
+      stop_queuecam()
 }
+
+if ( !WURFL.is_mobile ) {
+	document.getElementById('queuecam__img').onload = function(){
+		this.src = high_res + '&cachebuster=' + Math.random();
+	}
+}
+else {
+	this.src = stream;
+}
+
+
 
 /*
 var low_res  = 'http://fc8774.myfoscam.org:88/cgi-bin/CGIProxy.fcgi?cmd=snapPicture2&usr=thesite&pwd=sitepassword';
-var high_res = 'http://fc8774.myfoscam.org:88/cgi-bin/CGIProxy.fcgi?cmd=snapPicture2&usr=thesite&pwd=sitepassword';
 
-document.getElementById('queuecam-img').src = 'http://fc8774.myfoscam.org:88/cgi-bin/CGIProxy.fcgi?cmd=snapPicture2&usr=thesite&pwd=sitepassword';
-document.getElementById('queuecam-img').onload = function(){
-	this.src = 'http://fc8774.myfoscam.org:88/cgi-bin/CGIProxy.fcgi?cmd=snapPicture2&usr=thesite&pwd=sitepassword&cachebuster=' + Math.random();
-}*/
+*/
+//document.getElementById('queuecam-img').src = 'http://fc8774.myfoscam.org:88/cgi-bin/CGIProxy.fcgi?cmd=snapPicture2&usr=thesite&pwd=sitepassword';
