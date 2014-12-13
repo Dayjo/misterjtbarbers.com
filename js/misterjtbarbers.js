@@ -1,10 +1,12 @@
 var backgroundImage = document.getElementById('background');
 var queuecam = document.querySelector('.content-block.queuecam');
+var queuecam__img = document.getElementById('queuecam__img');
 var gallery = document.getElementById('gallery');
 var gallery_images = gallery.querySelector('img');
 
 var high_res = 'http://fc8774.myfoscam.org:88/cgi-bin/CGIProxy.fcgi?cmd=snapPicture2&usr=thesite&pwd=sitepassword';
 var stream 	= 'http://fc8774.myfoscam.org:88/cgi-bin/CGIStream.cgi?cmd=GetMJStream&usr=thesite&pwd=sitepassword';
+var closed_image = 'images/photos/shop-large.jpg';
 
 window.addEventListener('scroll', function(){
 	update_background_image();
@@ -51,22 +53,20 @@ if ( ( openingHours[today].open <= hour && openingHours[today].close > hour ) &&
       weareopen = true;
       document.getElementById("queuecam").classList.remove("closed");
 
-      stream_queuecam();
-
 } else {
       weareopen = false;
       document.getElementById("queuecam").classList.add("closed");
-
-      stop_queuecam()
+      queuecam__img.src = closed_image;
 }
 
 if ( !WURFL.is_mobile ) {
-	document.getElementById('queuecam__img').onload = function(){
+	queuecam__img.src = high_res;
+	queuecam__img.onload = queuecam__img.onerror = function(){
 		this.src = high_res + '&cachebuster=' + Math.random();
 	}
 }
 else {
-	this.src = stream;
+	queuecam__img.src = stream;
 }
 
 
