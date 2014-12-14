@@ -172,35 +172,36 @@
 
 				<form action="contact.php" method="POST" enctype="multipart/form-data" id="contact_form" onsubmit="return checkform13548(this);">
 				    
-				    <label>
-				        <strong class="formlabel">Your Name</strong>
-					</label>
-				    
-				    <input name="name" type="text" placeholder="Your Name" required/>
-				    
+				    <div class="form_body">
+					    <label>
+					        <strong class="formlabel">Your Name</strong>
+						</label>
+					    
+					    <input name="name" type="text" placeholder="Your Name" required/>
+					    
+					    <br class="clearBoth" />
 
-				    <br class="clearBoth" />
+					    <label for=email class="floatLeft marginLeft_50">
+					        <strong class="formlabel">Your Email</strong>
+					    </label>
 
-				    <label for=email class="floatLeft marginLeft_50">
-				        <strong class="formlabel">Your Email</strong>
-				    </label>
+				        <input name="email" type="email" required placeholder="your@email.com" />
 
-			        <input name="email" type="email" required placeholder="your@email.com" />
+						<br class="clearBoth" />
 
-					<br class="clearBoth" />
+					    <label for="message">
+					        <strong class="formlabel">Message</strong>
+					    </label>
 
-				    <label for="message">
-				        <strong class="formlabel">Message</strong>
-				    </label>
+				        <textarea id="message" name="message" rows="8" cols="30" required placeholder="Your message"></textarea>
 
-			        <textarea id="message" name="message" rows="8" cols="30" required placeholder="Your message"></textarea>
-
-					<button value="Send" type="submit">Send</button>
+						<button id="submit_button" value="Send" type="submit">Send</button>
+					</div>
 
 					<div class="form_submitted">
 						<h3>Message Sent!</h3>
 						<p>
-							Thank you for getting in touch. We'll get back to you as soon as possible!
+							Thanks for getting in touch. We'll get back to you as soon as possible!
 						</p>
 					</div>
 

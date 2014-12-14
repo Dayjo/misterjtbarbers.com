@@ -72,9 +72,13 @@ if ( ( openingHours[today].open <= hour && openingHours[today].close > hour ) &&
 
 
 var form = document.getElementById("contact_form");
+var submit_button = document.getElementById("submit_button");
+
 form.onsubmit = function(e) {
 	var f = ajax.formToData('contact_form');
-
+	submit_button.innerHtml = "Sending...";
+	submit_button.disabled = true;
+	
 	ajax.send("contact.php", "POST", "name=" + f.name + "&email=" + f.email + "&message=" + f.message, null, true, function(data){
 		if ( data == "sent" ) {
 			form.className = "submitted";
