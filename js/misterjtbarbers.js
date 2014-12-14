@@ -76,7 +76,9 @@ form.onsubmit = function(e) {
 	var f = ajax.formToData('contact_form');
 
 	ajax.send("contact.php", "POST", "name=" + f.name + "&email=" + f.email + "&message=" + f.message, null, true, function(data){
-		alert(data);
+		if ( data == "sent" ) {
+			form.className = "submitted";
+		}
 	});
 
 	e.preventDefault();

@@ -231,6 +231,17 @@ nav#header-menu a:hover {
 }
 
 /* Contact Form */
+.form_submitted {
+	display: none;
+}
+
+#contact_form.submitted .field {
+	display: none;
+}
+
+#contact_form.submitted .form_submitted {
+	display: block;
+}
 
 label { display: none; }
 
