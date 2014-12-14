@@ -25,8 +25,11 @@
 				<li class="right">
 					<a data-scroll href="#prices">Prices</a>
 				</li>
-				<li class="center">
+				<li class="center queuecam">
 					<a data-scroll href="#queuecam">Queue Cam</a>
+				</li>
+				<li class="opening-times">
+					<a data-scroll href="#opening-times">Opening Times</a>
 				</li>
 			</ul>
 		</nav>
@@ -97,21 +100,12 @@
 						</tr>
 					 </tbody>
 		        </table>
-		    </div><!--
-		    --><div class="grid__item desk--one-third lap--one-third palm--hidden">
-		    <h2>&nbsp;</h2>
-		    	<div id="gallery" class="responsive__gallery">
-		    		<img src="images/photos/staff-1-small.jpg" class="current"/><img src="images/photos/tao-small.jpg" /><!--
-		    		--><img src="images/photos/photo-3-small.jpg" /><!--
-		    		--><img src="images/photos/photo-5-small.jpg" /><!--
-		    --></div><div class="cf"></div>
-		    </div>
-		</div>
+		    </div></div>
 	</div>
 	
-	<div class="content-block grid">
+	<div id="opening-times" class="content-block grid">
 		<div class="content__constraint">
-			<div class="grid__item one-half palm--one-whole lap--one-half">
+			<div class="grid__item one-half palm--one-whole ">
 				<h2 class=Myriad>Opening Times</h2>
 				<br />
 				<table cellpadding="0" cellspacing="0" class="opening_times_table">
@@ -147,7 +141,7 @@
 					</tbody>
 				</table>
 			</div><!--
-			--><div class="grid__item one-half">
+			--><div class="grid__item one-half palm--one-whole">
 				<h2 class=Myriad>Get Directions</h2>
 				<br />
 				<div class="google-maps">
@@ -209,7 +203,23 @@
 			</div>
 		</div>
 	</div>
+	
 	<script type='text/javascript' src="//wurfl.io/wurfl.js"></script>
+	<script>
+	if ( !WURFL.is_mobile ) {
+		var prices_content = document.querySelector("#prices .content__constraint");
+		prices_content.innerHTML = prices_content.innerHTML + '<div class="grid__item desk--one-third lap--one-third palm--hidden">\
+		    <h2>&nbsp;</h2>\
+		    	<div id="gallery" class="responsive__gallery">\
+		    		<img src="images/photos/staff-1-small.jpg" class="current"/><img src="images/photos/tao-small.jpg" /><!--\
+		    		--><img src="images/photos/photo-3-small.jpg" /><!--\
+		    		--><img src="images/photos/photo-5-small.jpg" /><!--\
+		    --></div><div class="cf"></div>\
+		    </div>';
+
+	}
+	</script>
+
 	<script type="text/javascript" src="js/misterjtbarbers.js"></script>
 	<script src="js/bind-polyfill.min.js"></script>
 	<script type="text/javascript" src="js/miniajax.min.js"></script>

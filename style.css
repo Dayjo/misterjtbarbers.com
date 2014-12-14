@@ -46,12 +46,17 @@ h2 {
 	background-repeat: no-repeat;
 	background-size: cover;
 	background-image: url('images/photos/photo-2-large.jpg');
-
+	background-attachment:	scroll;
 	transition: opacity 1s ease-in-out;
 }
 
 .background-image.two {
 	background-image: url('images/photos/photo-6-large.jpg');
+
+}
+
+.background-image.three {
+	background-image: url('images/photos/photo-4.jpg');
 
 }
 
@@ -115,6 +120,10 @@ nav#header-menu a {
 
 nav#header-menu a:hover {
 	color: red;
+}
+
+nav#header-menu li.opening-times a{ 
+	display:none; 
 }
 
 .logo-container {
@@ -367,11 +376,39 @@ button:disabled {
 		text-align: left;
 	}
 
+	nav#header-menu li.opening-times a{ 
+		display: inline; 
+	}
 
+	nav#header-menu li.queuecam a{ 
+		display:none; 
+	}
 }
 
 @media screen and (max-width: 480px) {
 	.palm--hidden {
 		display: none;
 	}
+
+	.logo-container {
+		padding: 0;
+		padding-top: 1em;
+		text-align:center;
+	}
+
+	header { height: 20%;}
+
+	nav#header-menu {
+		top: 165px;
+		font-size: 2em;
+		padding-left: 0;
+		text-align: justify;
+	}
+
+	nav#header-menu ul li,nav#header-menu ul li.right {	
+		display: inline;
+		padding: 0; margin: 0 0.5em;
+	}
+
+	
 }
