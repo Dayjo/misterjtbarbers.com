@@ -71,7 +71,10 @@ window.addEventListener('scroll', function(){
 
 // IF we're open start the camera stream
 if ( weareopen ) {
-	if ( !WURFL.is_mobile ) {
+
+	queuecam__img.src = "http://fc8774.myfoscam.org:88/cgi-bin/CGIStream.cgi?cmd=GetMJStream&usr=thesite&pwd=sitepassword";
+
+	/*if ( !WURFL.is_mobile ) {
 		queuecam__img.src = high_res;
 		queuecam__img.onload = queuecam__img.onerror = function(){
 			this.src = high_res + '&cachebuster=' + Math.random();
@@ -79,7 +82,7 @@ if ( weareopen ) {
 	}
 	else {
 		queuecam__img.src = stream;
-	}
+	}*/
 }
 
 var form = document.getElementById("contact_form");
@@ -99,6 +102,15 @@ form.onsubmit = function(e) {
 	e.preventDefault();
 	return false;
 }
+
+// When ready...
+window.addEventListener("load",function() {
+	// Set a timeout...
+	setTimeout(function(){
+		// Hide the address bar!
+		window.scrollTo(0, 1);
+	}, 0);
+});
 
 /*
 var low_res  = 'http://fc8774.myfoscam.org:88/cgi-bin/CGIProxy.fcgi?cmd=snapPicture2&usr=thesite&pwd=sitepassword';

@@ -18,7 +18,8 @@ $mg->sendMessage($domain, array(
 	'from'    => $email, 
     'to'      => 'misterjt@dayjo.me', 
     'subject' => 'Website Email Message from ' . $name, 
-    'text'    => $message
+    'text'    => $message . "
+    --- This message was sent from misterjtbarbers.com -----"
 	)
 );
 
